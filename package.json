@@ -1,0 +1,14 @@
+// Vannila js and tailwind project config
+{
+  "name": "boostctr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "css": "npx tailwindcss -i ./input.css -o ./css/output.css --watch",
+    "tsc":"tsc --outDir ./logic/build/ --watch"
+  },
+  "keywords": [],
+  "author": "Abel Misiocha",
+  "license": "ISC"
+}
