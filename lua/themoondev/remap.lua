@@ -52,3 +52,25 @@ keymap("x", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 
 -- Formating
 keymap("n", "<leader>f", "<cmd> lua vim.lsp.buf.format()<CR>", opts)
+
+-- source remap
+vim.keymap.set("n", "<leader><leader>", function()
+    vim.cmd("so")
+end)
+
+-- Paste
+vim.keymap.set("x", "<leader>p", [["_dP]]) -- Paste over visual selection
+vim.keymap.set("n","sp",[["+p]]) -- Paste from system clipboard
+
+-- Copy
+vim.keymap.set({"n", "v"}, "sy", [["+y]]) -- Copy to system clipboard
+vim.keymap.set("n", "<leader>Y", [["+Y]]) -- Copy line to system clipboard
+
+vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+
+-- Renaming
+vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+
+-- Disable mode
+vim.keymap.set("n", "Q", "<nop>")

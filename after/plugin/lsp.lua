@@ -10,6 +10,7 @@ lsp.ensure_installed({
 	"html",
 	"tsserver",
 	"pyright",
+    "dockerls",
 	"bashls",
 	"jsonls",
 	"yamlls",
