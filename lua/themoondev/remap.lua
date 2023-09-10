@@ -60,7 +60,7 @@ end)
 
 -- Paste
 vim.keymap.set("x", "<leader>p", [["_dP]]) -- Paste over visual selection
-vim.keymap.set("n","sp",[["+p]]) -- Paste from system clipboard
+vim.keymap.set({"n","v"},"sp",[["+p]]) -- Paste from system clipboard
 
 -- Copy
 vim.keymap.set({"n", "v"}, "sy", [["+y]]) -- Copy to system clipboard
