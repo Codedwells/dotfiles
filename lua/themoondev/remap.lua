@@ -21,6 +21,9 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 -- Close buffers
 keymap("n", "<leader>c", ":bdelete<CR>", opts)
 
+-- Open local diagnostics
+keymap("n", "<leader>dd", ":lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", opts)
+
 -- Writting a file
 keymap("n", "<leader>w", ":w<CR>", opts)
 
