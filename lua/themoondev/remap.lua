@@ -56,11 +56,6 @@ keymap("x", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 -- Formating
 keymap("n", "<leader>f", "<cmd> lua vim.lsp.buf.format()<CR>", opts)
 
--- source remap
-vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
-end)
-
 -- Paste
 vim.keymap.set("x", "<leader>p", [["_dP]]) -- Paste over visual selection
 vim.keymap.set({"n","v"},"sp",[["+p]]) -- Paste from system clipboard
