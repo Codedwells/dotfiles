@@ -1,6 +1,6 @@
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
-  ensure_installed = { "vimdoc", "javascript", "typescript", "c", "lua", "rust","go","bash" },
+  ensure_installed = { "vimdoc", "javascript","json", "typescript", "c", "lua", "rust","go","bash" },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
@@ -19,5 +19,18 @@ require'nvim-treesitter.configs'.setup {
     -- Instead of true it can also be a list of languages
     additional_vim_regex_highlighting = false,
   },
+
+  -- ejs parser config
+  on_config_done = function()
+      local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+      parser_config.ejs = {
+          install_info = {
+              url = "https://github.com/tree-sitter/tree-sitter-embedded-template",
+              files = { "src/parser.c" },
+              requires_generate_from_grammar = true,
+          },
+          filetype = "ejs",
+      }
+  end
 }
- 
+
