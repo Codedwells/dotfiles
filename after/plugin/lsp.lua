@@ -8,8 +8,6 @@ lsp.ensure_installed({
 	'rust_analyzer',
 	"cssls",
     "clangd",
-    "csharp_ls",
-    "java_language_server",
 	"html",
 	"tsserver",
 	"pyright",
