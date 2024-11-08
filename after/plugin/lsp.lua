@@ -4,12 +4,11 @@ lsp.preset("recommended")
 
 
 lsp.ensure_installed({
-	'tsserver',
 	'rust_analyzer',
 	"cssls",
     "clangd",
 	"html",
-	"tsserver",
+	"ts_ls",
 	"pyright",
     "dockerls",
 	"bashls",
