@@ -34,3 +34,6 @@ require'nvim-treesitter.configs'.setup {
   end
 }
 
+-- Register MDX to use Markdown parser
+vim.treesitter.language.register("markdown", "mdx")
+

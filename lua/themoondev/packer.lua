@@ -49,6 +49,7 @@ return require('packer').startup(function(use)
     use("barrett-ruth/live-server.nvim")
 
 
+    -- Autopairs
     use {
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
